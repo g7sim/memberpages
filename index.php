@@ -99,16 +99,16 @@ if ($mbp_activated) {
     $member = parse_ini_file(MEMBERSFILEPATH.'membersfile.php',true);
 
     //hide pages via pdtabs
-    if ($plugin_cf['memberpages']['pdtab']) memberpages_HidePages();
+    if (isset($plugin_cf['memberpages']['pdtab'])) memberpages_HidePages();
 
     //hide pages via CMSimple scripting
-    if ($plugin_cf['memberpages']['texttrigger']) {
+    if (isset($plugin_cf['memberpages']['texttrigger'])) {
         include_once 'oldfuncs.php';
         memberpages_OldStyleHide();
     }
 
     // automatic log in
-    if ($plugin_cf['memberpages']['rememberme'])
+    if (isset($plugin_cf['memberpages']['rememberme']))
     {
         if (isset($_COOKIE['cookname']) && isset($_COOKIE['cookpass']))
         {
@@ -231,7 +231,7 @@ if ($function == 'memberslogin')
 ###################################################################################################
 
 // Show members notice on every page for logged in members
-if ($plugin_cf['memberpages']['onlogin_membersnotice'] == 1
+if (isset($plugin_cf['memberpages']['onlogin_membersnotice']) == 1
     && isset($_SESSION['username'])
     && !(XH_ADM && $edit))
 {
