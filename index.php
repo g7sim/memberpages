@@ -421,14 +421,14 @@ function loggedinform ($oneline=false)
 
             $logoff .= '<form style="display:inline;" action="'.$sn.'?'.$su.'" method="post">'
                  . '<input type="hidden" name="function" value="memberslogout">'
-                 . '<button type="submit" style="white-space:normal;">'
+                 . '<button type="submit" class="membp_member_button" style="white-space:normal;">'
                  . $plugin_tx['memberpages']['log_out']
                  . '</button></form>';
         }
     } else {
         $logoff .='<form style="display:inline;" action="'.$sn.'?'.$su.'" method="post">'
             . '<input type="hidden" name="function" value="memberslogout">'
-            . '<button type="submit">'.$plugin_tx['memberpages']['log_out'].'</button>'
+            . '<button type="submit" class="membp_member_button">'.$plugin_tx['memberpages']['log_out'].'</button>'
             . '</form>';
     }
 
@@ -438,7 +438,7 @@ function loggedinform ($oneline=false)
            ?  '<input type="hidden" name="function" value="closepanel">'
                .  '<button type="submit" class="membp_buttonpressed">'
            :  '<input type="hidden" name="function" value="memberspanel">'
-               .  '<button type="submit">';
+               .  '<button type="submit" class="membp_member_button">';
         $controlpanel .= $plugin_tx['memberpages']['member_control_panel']
             . '</button></form>';
     }
