@@ -1,4 +1,4 @@
-Memberpages Plugin for CMSimple_XH
+Memberpages Plugin for CMSimple_XH - fork with php7.4 mods
 ==================================
 
 Due to lack of time [svasti](http://svasti.de/) is currently unable to maintain
