@@ -38,20 +38,6 @@ elseif (function_exists('XH_startSession')) {
 }
 $plugin = basename(dirname(__FILE__),"/");
 
-//if php 4 is used, this function has to be supplied (by cmb)
-if (!function_exists('file_put_contents')) {
-    function file_put_contents($filename, $data) {
-        $f = @fopen($filename, 'w');
-        if (!$f) {
-            return false;
-        } else {
-        if (is_array($data)) {$data = implode('', $data);}
-            $bytes = fwrite($f, $data);
-            fclose($f);
-            return $bytes;
-        }
-    }
-}
 if (!function_exists('XH_hsc')) {
     function XH_hsc($str) {
         return htmlspecialchars($str);
