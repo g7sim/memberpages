@@ -33,7 +33,7 @@ define('MEMBERLIST_PATH', MEMBERSFILEPATH . 'members.dat');
 //define('MEMBERLIST_VAR', 'Name'); // Memberpages < 3.0
 //define('MEMBERLIST_VAR', 'username'); // Memberpages >= 3.0 and Register
 //define('MEMBERLIST_VAR', 'fullname'); // Register only: use Full Name
-if($plugin_cf['memberpages']['show_fullname']) define('MEMBERLIST_VAR', 'fullname');
+if (isset($plugin_cf['memberpages']['show_fullname'])) define('MEMBERLIST_VAR', 'fullname');
     else define('MEMBERLIST_VAR', 'username');
 
 /**
