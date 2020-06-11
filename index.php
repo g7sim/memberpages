@@ -886,7 +886,7 @@ function memberpages_MembersPanel()
         if ($newpassword && $member[$i]['pass'] != $newpassword) $nothingnew = false;
 
 
-        $newemail_not_ok   = ($newemail && !preg_match('!^[^\r\n|,]+@[^\s|;|{|}|,]+$!',$newemail))? true : false;
+        $newemail_not_ok   = ($newemail && !preg_match('!^[^\r\n|,]+@[^\s|;|{|}|,]+$!', $newemail));
         if (!$newemail_not_ok && $newemail && $newemail != $member[$i]['email'])
             $change .= $tx['new_email'] . '<br><br>';
         if ($newemail && $member[$i]['email'] != $newemail) $nothingnew = false;
